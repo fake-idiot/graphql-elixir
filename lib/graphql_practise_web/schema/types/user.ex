@@ -1,4 +1,4 @@
-defmodule GraphqlPractiseWeb.Schema.AccountsTypes do
+defmodule GraphqlPractiseWeb.Schema.Types.User do
   use Absinthe.Schema.Notation
 
   object(:user) do

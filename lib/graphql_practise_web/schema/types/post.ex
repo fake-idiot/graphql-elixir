@@ -1,5 +1,4 @@
-defmodule GraphqlPractiseWeb.Schema.BlogsTypes do
-
+defmodule GraphqlPractiseWeb.Schema.Types.Post do
   use Absinthe.Schema.Notation
 
   alias GraphqlPractiseWeb.Resolvers
