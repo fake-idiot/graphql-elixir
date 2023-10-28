@@ -1,7 +1,6 @@
 defmodule GraphqlPractiseWeb.Schema.Mutations.User do
   use Absinthe.Schema.Notation
 
-
   alias GraphqlPractiseWeb.Resolvers
 
   object :user_mutation do

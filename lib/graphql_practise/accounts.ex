@@ -76,6 +76,13 @@ defmodule GraphqlPractise.Accounts do
   """
   def get_user!(id), do: Repo.get!(User, id)
 
+  def get_user(id) do
+    from(u in User,
+      where: u.id == ^id
+    )
+    |> Repo.one()
+  end
+
   ## User registration
 
   @doc """

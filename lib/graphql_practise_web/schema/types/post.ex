@@ -14,4 +14,10 @@ defmodule GraphqlPractiseWeb.Schema.Types.Post do
     end
   end
 
+  input_object :create_post do
+    field :title, :string
+    field :body, :string
+    field :user_id, :id
+  end
+
 end

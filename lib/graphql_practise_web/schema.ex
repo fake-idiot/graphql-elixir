@@ -11,6 +11,7 @@ defmodule GraphqlPractiseWeb.Schema do
 
   #Mutations
   import_types GraphqlPractiseWeb.Schema.Mutations.User
+  import_types GraphqlPractiseWeb.Schema.Mutations.Post
 
   query do
     import_fields :post_queires
@@ -19,5 +20,6 @@ defmodule GraphqlPractiseWeb.Schema do
 
   mutation do
     import_fields :user_mutation
+    import_fields :post_mutation
   end
 end
