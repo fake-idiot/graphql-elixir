@@ -10,4 +10,9 @@ defmodule GraphqlPractiseWeb.Schema.AccountsTypes do
     field :inserted_at, :datetime
     field :updated_at, :datetime
   end
+
+  input_object :reister_user do
+    field :email, :string
+    field :password, :string
+  end
 end

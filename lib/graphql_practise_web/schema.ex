@@ -10,6 +10,19 @@ defmodule GraphqlPractiseWeb.Schema do
       resolve &Resolvers.Accounts.list_users/3
     end
 
+    @desc "Get user by id"
+    field :user_by_id, :user do
+      arg :id, non_null(:id)
+      resolve &Resolvers.Accounts.get_user/3
+    end
+  end
+
+  mutation do
+    @desc "Create %User{}"
+    field :create_user, :user do
+      arg(:input, non_null(:reister_user))
+      resolve &Resolvers.Accounts.create_user/3
+    end
   end
 
   scalar :datetime do
