@@ -53,6 +53,7 @@ defmodule GraphqlPractise.MixProject do
       {:dns_cluster, "~> 0.1.1"},
       {:plug_cowboy, "~> 2.5"},
       {:absinthe, "~> 1.7.5"},
+      {:absinthe_plug, "~> 1.5.8"},
       {:faker, "~> 0.17"}
     ]
   end
