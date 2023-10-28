@@ -2,7 +2,7 @@ defmodule GraphqlPractise.Accounts.User do
   use Ecto.Schema
   import Ecto.Changeset
 
-  schema "users" dogit 
+  schema "users" do
     field :email, :string
     field :password, :string, virtual: true, redact: true
     field :hashed_password, :string, redact: true
@@ -52,7 +52,7 @@ defmodule GraphqlPractise.Accounts.User do
   defp validate_password(changeset, opts) do
     changeset
     |> validate_required([:password])
-    |> validate_length(:password, min: 12, max: 72)
+    |> validate_length(:password, min: 8, max: 72)
     # Examples of additional password validation:
     # |> validate_format(:password, ~r/[a-z]/, message: "at least one lower case character")
     # |> validate_format(:password, ~r/[A-Z]/, message: "at least one upper case character")
